@@ -55,6 +55,8 @@ final class AddEventCoordinator: Coordinator{
     }
     
     func childDidFinish(_ childCoordinator: Coordinator){
+        print("qwe")
+        print(CoreDataManager().fetchEvent().first?.name)
         if let index = childCoordinators.firstIndex(where: { (coordinator) -> Bool in
             return childCoordinator === coordinator
         }){

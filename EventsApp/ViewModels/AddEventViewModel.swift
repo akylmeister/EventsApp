@@ -52,9 +52,10 @@ final class AddEventViewModel{
     }
     
     func tappedDone() {
+     
         guard let name = nameCellViewModel?.subtitle,
               let dateString  = dateCellViewModel?.subtitle,
-              let image = nameCellViewModel?.image,
+              let image = backgroundImageCellViewModel?.image,
               let date = dateFormatter.date(from: dateString)
         else { return }
         coreDataManager.saveEvent(name: name, date: date, image: image)

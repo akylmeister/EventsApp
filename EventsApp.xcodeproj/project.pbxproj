@@ -16,6 +16,10 @@
 		844659CA284B83D60011614A /* AddEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844659C9284B83D60011614A /* AddEventViewController.swift */; };
 		844659CC284B84450011614A /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844659CB284B84450011614A /* UIViewController+Extensions.swift */; };
 		844659CE284B85CD0011614A /* AddEventViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844659CD284B85CD0011614A /* AddEventViewModel.swift */; };
+		845B86342859EA0C00EDB0DC /* EventCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845B86332859EA0C00EDB0DC /* EventCellViewModel.swift */; };
+		845B86362859ED1600EDB0DC /* EventCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845B86352859ED1600EDB0DC /* EventCell.swift */; };
+		845B8638285A5E6C00EDB0DC /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845B8637285A5E6C00EDB0DC /* UIView+Extensions.swift */; };
+		845B863A285A6CAE00EDB0DC /* Date+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845B8639285A6CAE00EDB0DC /* Date+Extensions.swift */; };
 		845DCCB52852923300227FB8 /* TitleSubtitleCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845DCCB42852923300227FB8 /* TitleSubtitleCellViewModel.swift */; };
 		845DCCB82852928400227FB8 /* TitleSubtitleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845DCCB72852928400227FB8 /* TitleSubtitleCell.swift */; };
 		849D417D284A34EB0074D134 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849D417C284A34EB0074D134 /* AppDelegate.swift */; };
@@ -59,6 +63,10 @@
 		844659C9284B83D60011614A /* AddEventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEventViewController.swift; sourceTree = "<group>"; };
 		844659CB284B84450011614A /* UIViewController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extensions.swift"; sourceTree = "<group>"; };
 		844659CD284B85CD0011614A /* AddEventViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEventViewModel.swift; sourceTree = "<group>"; };
+		845B86332859EA0C00EDB0DC /* EventCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventCellViewModel.swift; sourceTree = "<group>"; };
+		845B86352859ED1600EDB0DC /* EventCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventCell.swift; sourceTree = "<group>"; };
+		845B8637285A5E6C00EDB0DC /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
+		845B8639285A6CAE00EDB0DC /* Date+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extensions.swift"; sourceTree = "<group>"; };
 		845DCCB42852923300227FB8 /* TitleSubtitleCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleSubtitleCellViewModel.swift; sourceTree = "<group>"; };
 		845DCCB72852928400227FB8 /* TitleSubtitleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleSubtitleCell.swift; sourceTree = "<group>"; };
 		849D4179284A34EB0074D134 /* EventsApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EventsApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -109,6 +117,8 @@
 			children = (
 				849D41B2284A4D260074D134 /* UIColor+Extensions.swift */,
 				844659CB284B84450011614A /* UIViewController+Extensions.swift */,
+				845B8637285A5E6C00EDB0DC /* UIView+Extensions.swift */,
+				845B8639285A6CAE00EDB0DC /* Date+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -158,6 +168,7 @@
 				844659C7284B7D2A0011614A /* EventListViewModel.swift */,
 				844659CD284B85CD0011614A /* AddEventViewModel.swift */,
 				845DCCB42852923300227FB8 /* TitleSubtitleCellViewModel.swift */,
+				845B86332859EA0C00EDB0DC /* EventCellViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -166,6 +177,7 @@
 			isa = PBXGroup;
 			children = (
 				845DCCB72852928400227FB8 /* TitleSubtitleCell.swift */,
+				845B86352859ED1600EDB0DC /* EventCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -358,17 +370,21 @@
 			files = (
 				845DCCB52852923300227FB8 /* TitleSubtitleCellViewModel.swift in Sources */,
 				849D41AD284A362D0074D134 /* AppCoordinator.swift in Sources */,
+				845B863A285A6CAE00EDB0DC /* Date+Extensions.swift in Sources */,
+				845B8638285A5E6C00EDB0DC /* UIView+Extensions.swift in Sources */,
 				849D41B1284A39510074D134 /* EventListViewController.swift in Sources */,
 				849D417D284A34EB0074D134 /* AppDelegate.swift in Sources */,
 				844659CE284B85CD0011614A /* AddEventViewModel.swift in Sources */,
 				849D41B3284A4D260074D134 /* UIColor+Extensions.swift in Sources */,
 				844659CC284B84450011614A /* UIViewController+Extensions.swift in Sources */,
 				849D417F284A34EB0074D134 /* SceneDelegate.swift in Sources */,
+				845B86362859ED1600EDB0DC /* EventCell.swift in Sources */,
 				849D41AF284A38910074D134 /* EventListCoordinator.swift in Sources */,
 				844659C6284B7CED0011614A /* AddEventCoordinator.swift in Sources */,
 				844659CA284B83D60011614A /* AddEventViewController.swift in Sources */,
 				84305A272856350D000BDE7D /* EventsCellBuilder.swift in Sources */,
 				844659C8284B7D2A0011614A /* EventListViewModel.swift in Sources */,
+				845B86342859EA0C00EDB0DC /* EventCellViewModel.swift in Sources */,
 				84305A2528562AA1000BDE7D /* ImagePickerCoordinator.swift in Sources */,
 				845DCCB82852928400227FB8 /* TitleSubtitleCell.swift in Sources */,
 				844659C4284B71580011614A /* CoreDataManager.swift in Sources */,
