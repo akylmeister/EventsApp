@@ -16,6 +16,10 @@ final class EventCell: UITableViewCell {
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
+        
+        setupView()
+        setupHierarchy()
+        setupLayout()
     }
     
     required init?(coder: NSCoder) {
@@ -69,6 +73,9 @@ final class EventCell: UITableViewCell {
         }
         dateLabel.text = viewModel.dateText
         eventNameLabel.text = viewModel.eventName
-//        backgroundImageView.image = viewModel.backgroundImage
+        
+        viewModel.loadImage { image in
+            self.backgroundImageView.image = image
+        }
     }
 }
