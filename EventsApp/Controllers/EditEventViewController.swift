@@ -1,16 +1,17 @@
 //
-//  AddEventViewController.swift
+//  EditEventViewController.swift
 //  EventsApp
 //
-//  Created by admin on 04.06.2022.
+//  Created by admin on 17.06.2022.
 //
 
 import UIKit
 
-class AddEventViewController: UIViewController {
-    @IBOutlet weak var tableView: UITableView!
-
-    var viewModel: AddEventViewModel!
+final class EditEventViewController: UIViewController {
+    
+    @IBOutlet var tableView: UITableView!
+    
+    var viewModel: EditEventViewModel!
     
     
     override func viewDidLoad() {
@@ -54,7 +55,7 @@ class AddEventViewController: UIViewController {
     }
 }
 
-extension AddEventViewController: UITableViewDataSource {
+extension EditEventViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return viewModel.numberOfRows()
     }
@@ -73,13 +74,13 @@ extension AddEventViewController: UITableViewDataSource {
     }
 }
 
-extension AddEventViewController: UITableViewDelegate {
+extension EditEventViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         viewModel.didSelectAt(at: indexPath)
         tableView.deselectRow(at: indexPath, animated: false)
     }
 }
-extension AddEventViewController: UITextFieldDelegate {
+extension EditEventViewController: UITextFieldDelegate {
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         guard let currentText = textField.text else { return false }
         let text = currentText + string
@@ -91,3 +92,4 @@ extension AddEventViewController: UITextFieldDelegate {
         return true
     }
 }
+

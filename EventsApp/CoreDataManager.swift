@@ -24,11 +24,24 @@ final class CoreDataManager {
         persistentContainer.viewContext
     }
     
+    func getEvent(_ id: NSManagedObjectID) -> Event? {
+        do {
+            return try moc.existingObject(with: id) as? Event
+        }
+        catch {
+            print(error)
+        }
+        return nil
+    }
+    
     func saveEvent(name: String, date: Date, image: UIImage){
         let event = Event(context: moc)
         event.setValue(name, forKey: "name")
+        
+        let resizedImage = image.sameAspectRatio(newHeight: 250)
+        
         event.setValue(date, forKey: "date")
-        let imageData = image.jpegData(compressionQuality: 1)
+        let imageData = resizedImage.jpegData(compressionQuality: 0.5)
         event.setValue(imageData, forKey: "image")
         
         do {
@@ -38,6 +51,24 @@ final class CoreDataManager {
             print(error)
         }
     }
+    
+    func updateEvent(event: Event, name: String, date: Date, image: UIImage){
+        event.setValue(name, forKey: "name")
+        
+        let resizedImage = image.sameAspectRatio(newHeight: 250)
+        
+        event.setValue(date, forKey: "date")
+        let imageData = resizedImage.jpegData(compressionQuality: 0.5)
+        event.setValue(imageData, forKey: "image")
+        
+        do {
+            try moc.save()
+        }
+        catch{
+            print(error)
+        }
+    }
+    
     func fetchEvent() -> [Event] {
         do {
             let fetchRequest = NSFetchRequest<Event>(entityName: "Event")
