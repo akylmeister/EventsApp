@@ -43,6 +43,7 @@
 		84CC3FE2285CEBE900C25E6F /* EditEventCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CC3FE1285CEBE900C25E6F /* EditEventCoordinator.swift */; };
 		84CC3FE4285CED2000C25E6F /* EditEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CC3FE3285CED2000C25E6F /* EditEventViewController.swift */; };
 		84CC3FE6285CEE3100C25E6F /* EditEventViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CC3FE5285CEE3100C25E6F /* EditEventViewModel.swift */; };
+		84CC3FE9285DDDE800C25E6F /* EventService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CC3FE8285DDDE800C25E6F /* EventService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -103,6 +104,7 @@
 		84CC3FE1285CEBE900C25E6F /* EditEventCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditEventCoordinator.swift; sourceTree = "<group>"; };
 		84CC3FE3285CED2000C25E6F /* EditEventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditEventViewController.swift; sourceTree = "<group>"; };
 		84CC3FE5285CEE3100C25E6F /* EditEventViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditEventViewModel.swift; sourceTree = "<group>"; };
+		84CC3FE8285DDDE800C25E6F /* EventService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -232,6 +234,7 @@
 		849D417B284A34EB0074D134 /* EventsApp */ = {
 			isa = PBXGroup;
 			children = (
+				84CC3FE7285DDDD900C25E6F /* Services */,
 				845DCCB62852927000227FB8 /* Views */,
 				844659D0284B8E590011614A /* ViewModels */,
 				844659BC284B6E140011614A /* Extensions */,
@@ -262,6 +265,14 @@
 				849D419F284A34EF0074D134 /* EventsAppUITestsLaunchTests.swift */,
 			);
 			path = EventsAppUITests;
+			sourceTree = "<group>";
+		};
+		84CC3FE7285DDDD900C25E6F /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				84CC3FE8285DDDE800C25E6F /* EventService.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -420,6 +431,7 @@
 				8492846D285CD5E600A3555B /* TimeRemainingViewModel.swift in Sources */,
 				84CC3FE6285CEE3100C25E6F /* EditEventViewModel.swift in Sources */,
 				84928469285CCD7500A3555B /* EventDetailViewModel.swift in Sources */,
+				84CC3FE9285DDDE800C25E6F /* EventService.swift in Sources */,
 				845B86342859EA0C00EDB0DC /* EventCellViewModel.swift in Sources */,
 				84305A2528562AA1000BDE7D /* ImagePickerCoordinator.swift in Sources */,
 				845DCCB82852928400227FB8 /* TitleSubtitleCell.swift in Sources */,

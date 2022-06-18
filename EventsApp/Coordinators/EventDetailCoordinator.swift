@@ -9,11 +9,12 @@ import Foundation
 import UIKit
 import CoreData
 
-final class EventDetailCoordinator: Coordinator {
+final class EventDetailCoordinator: Coordinator, EventUpdatingCoordinator {
     var childCoordinators: [Coordinator] = []
     private let navigationController: UINavigationController
     private let eventID: NSManagedObjectID
-    var parentCoordinator: EventListCoordinator?
+    
+    var parentCoordinator: (EventUpdatingCoordinator & Coordinator)?
     var onUpdateEvent = {}
     
     init(eventID: NSManagedObjectID, navigationController: UINavigationController) {

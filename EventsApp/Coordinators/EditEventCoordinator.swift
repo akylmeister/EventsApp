@@ -7,10 +7,15 @@
 
 import UIKit
 
+protocol EventUpdatingCoordinator {
+    var onUpdateEvent: () -> Void { get }
+}
+
 final class EditEventCoordinator: Coordinator {
     var childCoordinators: [Coordinator] = []
     private let navigationController: UINavigationController
-    var parentCoordinator: EventDetailCoordinator?
+    
+    var parentCoordinator: (EventUpdatingCoordinator & Coordinator)?
     private var completion: (UIImage) -> Void = { _ in }
     private let event: Event
     

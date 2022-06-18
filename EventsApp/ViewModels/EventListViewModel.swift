@@ -7,7 +7,7 @@
 
 import Foundation
 
-final class EventListViewModel{
+final class EventListViewModel {
     
     let title = "Events"
     var coordinator: EventListCoordinator?
@@ -17,10 +17,10 @@ final class EventListViewModel{
     }
     
     fileprivate var cells: [Cell] = []
-    private let coreDataManager: CoreDataManager
+    private let eventService: EventServiceProtocol
     
-    init(coreDataManager: CoreDataManager = CoreDataManager.shared) {
-        self.coreDataManager = coreDataManager
+    init(eventService: EventServiceProtocol = EventService()) {
+        self.eventService = eventService
     }
     
     func viewDidLoad() {
@@ -29,7 +29,7 @@ final class EventListViewModel{
     
     func reload() {
         EventCellViewModel.imageCache.removeAllObjects()
-        let events = coreDataManager.fetchEvent()
+        let events = eventService.getEvents()
         cells = events.map{
             var eventCellViewModel = EventCellViewModel($0)
             if let coordinator = coordinator {
